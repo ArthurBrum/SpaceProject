@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EBF870E1AE0F3CB00F96BD3 /* BulletGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBF870A1AE0F3CB00F96BD3 /* BulletGalaga.png */; };
+		8EBF870F1AE0F3CB00F96BD3 /* EnemyGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBF870B1AE0F3CB00F96BD3 /* EnemyGalaga.png */; };
+		8EBF87101AE0F3CB00F96BD3 /* hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBF870C1AE0F3CB00F96BD3 /* hero.png */; };
+		8EBF87111AE0F3CB00F96BD3 /* PlayerGalaga.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBF870D1AE0F3CB00F96BD3 /* PlayerGalaga.png */; };
 		8EC9D69E1AE0C643007F38CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9D69D1AE0C643007F38CE /* AppDelegate.swift */; };
 		8EC9D6A01AE0C643007F38CE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9D69F1AE0C643007F38CE /* GameScene.sks */; };
 		8EC9D6A21AE0C643007F38CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9D6A11AE0C643007F38CE /* GameScene.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EBF870A1AE0F3CB00F96BD3 /* BulletGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BulletGalaga.png; sourceTree = "<group>"; };
+		8EBF870B1AE0F3CB00F96BD3 /* EnemyGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnemyGalaga.png; sourceTree = "<group>"; };
+		8EBF870C1AE0F3CB00F96BD3 /* hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hero.png; sourceTree = "<group>"; };
+		8EBF870D1AE0F3CB00F96BD3 /* PlayerGalaga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayerGalaga.png; sourceTree = "<group>"; };
 		8EC9D6981AE0C643007F38CE /* SpaceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC9D69C1AE0C643007F38CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC9D69D1AE0C643007F38CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EBF87091AE0F39200F96BD3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8EBF870A1AE0F3CB00F96BD3 /* BulletGalaga.png */,
+				8EBF870B1AE0F3CB00F96BD3 /* EnemyGalaga.png */,
+				8EBF870C1AE0F3CB00F96BD3 /* hero.png */,
+				8EBF870D1AE0F3CB00F96BD3 /* PlayerGalaga.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8EC9D68F1AE0C643007F38CE = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +115,7 @@
 		8EC9D69B1AE0C643007F38CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EBF87091AE0F39200F96BD3 /* Images */,
 				8EC9D69C1AE0C643007F38CE /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,7 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC9D6AC1AE0C643007F38CE /* LaunchScreen.xib in Resources */,
+				8EBF870F1AE0F3CB00F96BD3 /* EnemyGalaga.png in Resources */,
+				8EBF870E1AE0F3CB00F96BD3 /* BulletGalaga.png in Resources */,
+				8EBF87101AE0F3CB00F96BD3 /* hero.png in Resources */,
 				8EC9D6A91AE0C643007F38CE /* Images.xcassets in Resources */,
+				8EBF87111AE0F3CB00F96BD3 /* PlayerGalaga.png in Resources */,
 				8EC9D6A01AE0C643007F38CE /* GameScene.sks in Resources */,
 				8EC9D6A71AE0C643007F38CE /* Main.storyboard in Resources */,
 			);
@@ -417,6 +441,7 @@
 				8EC9D6BD1AE0C644007F38CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EC9D6BE1AE0C644007F38CE /* Build configuration list for PBXNativeTarget "SpaceProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +450,7 @@
 				8EC9D6C01AE0C644007F38CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
