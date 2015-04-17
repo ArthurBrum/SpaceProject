@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Declares attributes
     var Score = Int()
     var HighScore = Int()
-    var Player = SKSpriteNode(imageNamed: "PlayerGalaga.png")
+    var Player = SKSpriteNode(imageNamed: "hero.png")
     var ScoreLbl = UILabel()
 
     override func didMoveToView(view: SKView) {
@@ -57,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var EnemyTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("SpawnEnemies"), userInfo: nil, repeats: true)
         
-        ScoreLbl.text = "\(Score)"
+        ScoreLbl.text = " Score: \(Score)"
         ScoreLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         ScoreLbl.backgroundColor = UIColor(red: 0.1, green: 3, blue: 0.1, alpha: 0.3)
         ScoreLbl.textColor = UIColor.whiteColor()
@@ -100,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         Score++
         
-        ScoreLbl.text = "\(Score)"
+        ScoreLbl.text = " Score: \(Score)"
     }
     
     
@@ -196,7 +196,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             Player.position.x = location.x
             
-            // Be careful, enables teletransporting super power xPPP
+            // Be careful, enables teletransporting super power xPPP - and 'probably' crashes the app!
             //Player.position.y = location.y
             
         }
