@@ -81,6 +81,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func CollisionWithPerson(Enemy: SKSpriteNode, Person: SKSpriteNode){
         Enemy.removeFromParent()
         Person.removeFromParent()
+        
+        self.view?.presentScene(EndScene())
+        ScoreLbl.removeFromSuperview()
+        
     }
     
     func SpawnBullets(){
@@ -106,7 +110,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func SpawnEnemies(){
         var Enemy = SKSpriteNode(imageNamed: "EnemyGalaga.png")
-        Enemy.zPosition = -5
         var MinValue = self.size.width/8
         var MaxValue = self.size.width - 20
         var SpawnPoint = UInt32(MaxValue - MinValue)
