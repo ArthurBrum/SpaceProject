@@ -20,6 +20,8 @@
 		8EC9D6A91AE0C643007F38CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9D6A81AE0C643007F38CE /* Images.xcassets */; };
 		8EC9D6AC1AE0C643007F38CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9D6AA1AE0C643007F38CE /* LaunchScreen.xib */; };
 		8EC9D6B81AE0C644007F38CE /* SpaceProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9D6B71AE0C644007F38CE /* SpaceProjectTests.swift */; };
+		9351E4161AE155BB00BBEBFC /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9351E4141AE155BB00BBEBFC /* MagicParticle.sks */; };
+		9351E4171AE155BB00BBEBFC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9351E4151AE155BB00BBEBFC /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		8EC9D6B11AE0C644007F38CE /* SpaceProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC9D6B61AE0C644007F38CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC9D6B71AE0C644007F38CE /* SpaceProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceProjectTests.swift; sourceTree = "<group>"; };
+		9351E4141AE155BB00BBEBFC /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
+		9351E4151AE155BB00BBEBFC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				8EC9D6A81AE0C643007F38CE /* Images.xcassets */,
 				8EC9D6AA1AE0C643007F38CE /* LaunchScreen.xib */,
 				8EC9D69B1AE0C643007F38CE /* Supporting Files */,
+				9351E4141AE155BB00BBEBFC /* MagicParticle.sks */,
+				9351E4151AE155BB00BBEBFC /* spark.png */,
 			);
 			path = SpaceProject;
 			sourceTree = "<group>";
@@ -222,9 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC9D6AC1AE0C643007F38CE /* LaunchScreen.xib in Resources */,
+				9351E4161AE155BB00BBEBFC /* MagicParticle.sks in Resources */,
 				8EBF870F1AE0F3CB00F96BD3 /* EnemyGalaga.png in Resources */,
 				8EBF870E1AE0F3CB00F96BD3 /* BulletGalaga.png in Resources */,
 				8EBF87101AE0F3CB00F96BD3 /* hero.png in Resources */,
+				9351E4171AE155BB00BBEBFC /* spark.png in Resources */,
 				8EC9D6A91AE0C643007F38CE /* Images.xcassets in Resources */,
 				8EBF87111AE0F3CB00F96BD3 /* PlayerGalaga.png in Resources */,
 				8EC9D6A01AE0C643007F38CE /* GameScene.sks in Resources */,

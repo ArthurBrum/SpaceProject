@@ -17,16 +17,31 @@ struct PhysicsCatagory{
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
+
     var Score = Int()
+    var HighScore = Int()
     var Player = SKSpriteNode(imageNamed: "PlayerGalaga.png")
     var ScoreLbl = UILabel()
 
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
+        
+        var HighScoreDefault = NSUserDefaults.standardUserDefaults()
+        if(HighScoreDefault.valueForKey("HighScore") != nil){
+            HighScore = HighScoreDefault.valueForKey("HighScore") as! NSInteger
+        }
+        else{
+            HighScore = 0
+        }
         
         physicsWorld.contactDelegate = self
         
+        self.scene?.backgroundColor = UIColor.blackColor()
+        
+        self.scene?.size = CGSize(width: 640, height: 1136)
+        
+        self.addChild( SKEmitterNode(fileNamed: "MagicParticle"))
+        
+        self.addChild(Player)
         
         Player.position = CGPointMake(self.size.width/2, self.size.height/6)
         
@@ -38,9 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var Timer = NSTimer.scheduledTimerWithTimeInterval(0.25, target: self, selector: Selector("SpawnBullets"), userInfo: nil, repeats: true)
         
-        var EnemyTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("SpawnEnemies"), userInfo: nil, repeats: true)
-        
-        self.addChild(Player)
+        var EnemyTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("SpawnEnemies"), userInfo: nil, repeats: true)
         
         ScoreLbl.text = "\(Score)"
         ScoreLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
@@ -79,9 +92,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func CollisionWithPerson(Enemy: SKSpriteNode, Person: SKSpriteNode){
+        var ScoreDefault = NSUserDefaults.standardUserDefaults()
+        ScoreDefault.setValue(Score, forKey: "Score")
+        ScoreDefault.synchronize()
+        
+        if(Score > HighScore){
+            var HighScoreDefault = NSUserDefaults.standardUserDefaults()
+            HighScoreDefault.setValue(Score, forKey: "HighScore")
+        }
+        
         Enemy.removeFromParent()
         Person.removeFromParent()
-        
         self.view?.presentScene(EndScene())
         ScoreLbl.removeFromSuperview()
         
