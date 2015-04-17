@@ -49,6 +49,12 @@ class EndScene : SKScene {
         
     }
     
+    /**
+    Starts a new game
+
+    :returns: void
+    */
+
     func Restart(){
         self.view?.presentScene(GameScene(), transition: SKTransition.crossFadeWithDuration(0.3))
         RestartBtn.removeFromSuperview()
