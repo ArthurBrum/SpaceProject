@@ -179,9 +179,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         var action = SKAction.moveToY(-70, duration: 3.0)
-        
         let actionDone = SKAction.removeFromParent()
         Enemy.runAction(SKAction.sequence([action, actionDone]))
+        
+        if(self.Score < 10){
+            action = SKAction.moveToY(-70, duration: 3.0)
+        }
+        else{
+            action = SKAction.moveToY(-70, duration: 0.1)
+        }
         
         self.addChild(Enemy)
     }
