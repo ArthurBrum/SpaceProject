@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Declares attributes
     var Score = Int()
     var HighScore = Int()
-    var Player = SKSpriteNode(imageNamed: "hero.png")
+    var Player = SKSpriteNode(imageNamed: "playerGalaga.png")
     var ScoreLbl = UILabel()
 
     override func didMoveToView(view: SKView) {
@@ -182,8 +182,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let actionDone = SKAction.removeFromParent()
         Enemy.runAction(SKAction.sequence([action, actionDone]))
         
-        if(self.Score > 10){
-            action = SKAction.moveToY(-70, duration: 6.0)
+        if(self.Score < 10){
+            action = SKAction.moveToY(-70, duration: 3.0)
+        }
+        else{
+            action = SKAction.moveToY(-70, duration: 0.1)
         }
         
         self.addChild(Enemy)

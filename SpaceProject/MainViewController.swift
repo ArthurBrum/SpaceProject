@@ -17,7 +17,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameTitle.alpha = 0
+        levelModeButton.alpha = 0
+        endlessModeButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
@@ -26,7 +28,15 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(3.0, animations: {()->Void in
+            self.nameTitle.alpha = 1
+            self.levelModeButton.alpha = 1
+            self.endlessModeButton.alpha = 1
+        })
+    }
     /*
     // MARK: - Navigation
 
