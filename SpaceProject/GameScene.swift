@@ -21,7 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Declares attributes
     var Score = Int()
     var HighScore = Int()
-    var Player = SKSpriteNode(imageNamed: "hero.png")
+    var Player = SKSpriteNode(imageNamed: "PlayerGalaga.png")
     var ScoreLbl = UILabel()
 
     override func didMoveToView(view: SKView) {
