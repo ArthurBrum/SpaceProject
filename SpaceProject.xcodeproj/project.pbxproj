@@ -22,6 +22,7 @@
 		8EC9D6B81AE0C644007F38CE /* SpaceProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9D6B71AE0C644007F38CE /* SpaceProjectTests.swift */; };
 		9351E4161AE155BB00BBEBFC /* MagicParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9351E4141AE155BB00BBEBFC /* MagicParticle.sks */; };
 		9351E4171AE155BB00BBEBFC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9351E4151AE155BB00BBEBFC /* spark.png */; };
+		936F18901AF28AC40024174C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F188F1AF28AC40024174C /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8EC9D6B71AE0C644007F38CE /* SpaceProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceProjectTests.swift; sourceTree = "<group>"; };
 		9351E4141AE155BB00BBEBFC /* MagicParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MagicParticle.sks; sourceTree = "<group>"; };
 		9351E4151AE155BB00BBEBFC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		936F188F1AF28AC40024174C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				8EC9D69F1AE0C643007F38CE /* GameScene.sks */,
 				8EC9D6A11AE0C643007F38CE /* GameScene.swift */,
 				8EC9D6A31AE0C643007F38CE /* GameViewController.swift */,
+				936F188F1AF28AC40024174C /* MainViewController.swift */,
 				8EC9D6A51AE0C643007F38CE /* Main.storyboard */,
 				8EC9D6A81AE0C643007F38CE /* Images.xcassets */,
 				8EC9D6AA1AE0C643007F38CE /* LaunchScreen.xib */,
@@ -258,6 +261,7 @@
 				8EC9D6A41AE0C643007F38CE /* GameViewController.swift in Sources */,
 				8EBF87151AE11B7B00F96BD3 /* EndScene.swift in Sources */,
 				8EC9D69E1AE0C643007F38CE /* AppDelegate.swift in Sources */,
+				936F18901AF28AC40024174C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
