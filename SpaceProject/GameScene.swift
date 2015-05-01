@@ -19,6 +19,7 @@ struct PhysicsCatagory{
 class GameScene: SKScene, SKPhysicsContactDelegate {
 
     //Declares attributes
+    var profileName : String!
     var Score = Int()
     var HighScore = Int()
     var Player = SKSpriteNode(imageNamed: "PlayerGalaga.png")
@@ -26,8 +27,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didMoveToView(view: SKView) {
         
-        
+
         var HighScoreDefault = NSUserDefaults.standardUserDefaults()
+        
+        HighScoreDefault.setValue(profileName, forKey: "profileName")
         
         //Sets zero if highscore is not declared (nil) and initializes otherwise.
         if(HighScoreDefault.valueForKey("HighScore") != nil){
@@ -42,7 +45,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.scene?.backgroundColor = UIColor.blackColor()
         self.scene?.size = CGSize(width: 640, height: 1136)
         self.addChild( SKEmitterNode(fileNamed: "MagicParticle"))
-        
+    
         //Sets physics for Player
         Player.position = CGPointMake(self.size.width/2, self.size.height/6)
         Player.physicsBody = SKPhysicsBody(rectangleOfSize: Player.size)
@@ -57,13 +60,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var EnemyTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("SpawnEnemies"), userInfo: nil, repeats: true)
         
-        ScoreLbl.text = " Score: \(Score)"
-        ScoreLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
+        ScoreLbl.text = "\(profileName) Score: \(Score)"
+        ScoreLbl = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
         ScoreLbl.backgroundColor = UIColor(red: 0.1, green: 3, blue: 0.1, alpha: 0.3)
         ScoreLbl.textColor = UIColor.whiteColor()
         self.view?.addSubview(ScoreLbl)
     }
-    
     
     // MARK: - Collisions treatment
     
@@ -100,7 +102,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         Score++
         
-        ScoreLbl.text = " Score: \(Score)"
+        ScoreLbl.text = "\(profileName) Score: \(Score)"
     }
     
     
@@ -116,10 +118,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ScoreDefault.setValue(Score, forKey: "Score")
         ScoreDefault.synchronize()
         
+        
         //Updates highscore if needed.
         if(Score > HighScore){
             var HighScoreDefault = NSUserDefaults.standardUserDefaults()
             HighScoreDefault.setValue(Score, forKey: "HighScore")
+            HighScoreDefault.setValue(profileName, forKey: "BestPlayer")
         }
         
         Enemy.removeFromParent()
@@ -133,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK: - Auto generated nodes
     
     /**
-    Generates new bullets and makes them go down
+    Generates new bullets and make them go down
     
     :returns: void
     */

@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 
+
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
@@ -26,6 +27,9 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+    
+    var profileName : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +45,7 @@ class GameViewController: UIViewController {
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            scene.profileName = profileName
             
             skView.presentScene(scene)
         }

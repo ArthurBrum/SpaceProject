@@ -34,18 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-JH-oOd">
-                                <rect key="frame" x="243" y="267" width="115" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="Pvh-4Z-SW6"/>
-                                    <constraint firstAttribute="height" constant="30" id="hof-J0-urz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Level Mode">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCX-qr-vzR">
                                 <rect key="frame" x="228" y="348" width="144" height="30"/>
                                 <constraints>
@@ -53,12 +41,12 @@
                                     <constraint firstAttribute="width" constant="144" id="Wvo-Po-a7y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Endless Mode">
+                                <state key="normal" title="Start Game">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LVB-YS-i5n" kind="show" id="FiG-Mf-Pft"/>
+                                    <segue destination="LVB-YS-i5n" kind="show" identifier="segueToGame" id="FiG-Mf-Pft"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Space Shooter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-cT-qRF">
@@ -71,18 +59,38 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ProfileName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-Ef-cMg">
+                                <rect key="frame" x="252" y="230" width="97" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BzT-FQ-ugx"/>
+                                    <constraint firstAttribute="width" constant="97" id="URw-sZ-P0w"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="97" id="ps1-fs-0Ss"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ps1-fs-0Ss"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="XaC-zg-4oQ" id="0W5-5w-luy"/>
+                                </connections>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.096165707236842007" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="tNq-cT-qRF" secondAttribute="centerX" id="1N9-y9-CwP"/>
-                            <constraint firstItem="tCX-qr-vzR" firstAttribute="top" secondItem="SnL-JH-oOd" secondAttribute="bottom" constant="51" id="1iq-4C-uPv"/>
                             <constraint firstAttribute="centerY" secondItem="tCX-qr-vzR" secondAttribute="centerY" constant="-63" id="3e3-U8-dcs"/>
                             <constraint firstAttribute="centerY" secondItem="tNq-cT-qRF" secondAttribute="centerY" constant="149.5" id="4IP-0G-caj"/>
                             <constraint firstAttribute="centerX" secondItem="tCX-qr-vzR" secondAttribute="centerX" id="6Mg-hj-RSH"/>
-                            <constraint firstAttribute="centerX" secondItem="SnL-JH-oOd" secondAttribute="centerX" constant="-0.5" id="Cid-JA-19q"/>
-                            <constraint firstItem="SnL-JH-oOd" firstAttribute="top" secondItem="tNq-cT-qRF" secondAttribute="bottom" constant="81" id="dqp-Sq-7Ha"/>
-                            <constraint firstAttribute="centerY" secondItem="SnL-JH-oOd" secondAttribute="centerY" constant="18" id="j34-L1-MCy"/>
+                            <constraint firstAttribute="centerX" secondItem="4Jg-Ef-cMg" secondAttribute="centerX" constant="-0.5" id="DCV-Om-JNq"/>
+                            <constraint firstAttribute="centerY" secondItem="4Jg-Ef-cMg" secondAttribute="centerY" constant="55" id="KjB-1W-9jJ"/>
                         </constraints>
+                        <connections>
+                            <action selector="clickedBackground" destination="XaC-zg-4oQ" eventType="touchUpInside" id="yKh-kx-rBC"/>
+                        </connections>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundColor">
@@ -91,8 +99,8 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="endlessModeButton" destination="tCX-qr-vzR" id="Q5h-au-5HP"/>
-                        <outlet property="levelModeButton" destination="SnL-JH-oOd" id="efB-Ue-JCB"/>
                         <outlet property="nameTitle" destination="tNq-cT-qRF" id="L5s-EQ-2SH"/>
+                        <outlet property="playerNameLabel" destination="4Jg-Ef-cMg" id="ix5-CR-GAD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6b0-C9-vLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
